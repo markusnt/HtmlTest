@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The script element</h1>
+
+
+In my life, I used the following web search engines:<br/>
+<a href="//www.yahoo.com">Yahoo!</a><br/>
+<a href="//www.altavista.com">AltaVista</a><br/>
+<a href="//www.google.com">Google</a><br/>
+
+<script>
+
+function registerHandlers(){
+  const as = document.getElementsByTagName('a');
+  for (let i = 0; i < as.length; i++) {
+    as[i].onclick = function (e) {
+    alert(i);
+    return false;
+    };
+    
+    // Função utilizando addEventListener sendo mais clean code e possibilitando possiveis alteraçoes mais complexas em chamadas
+    // as[i].addEventListener('click',function(e){
+    //   alert(i);
+    //   e.preventDefault();
+    // });
+  }
+} 
+
+registerHandlers();
+
+</script> 
+
+</body>
+</html>
